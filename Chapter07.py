@@ -15,11 +15,7 @@ import neattext as nt
 import spacy
 from spacy.cli import download
 
-try:
-    nlp = spacy.load("en_core_web_sm")
-except:
-    download("en_core_web_sm")
-    nlp = spacy.load("en_core_web_sm")
+
 
 from collections import Counter
 import re
@@ -51,6 +47,7 @@ def summarize_text(text, num_sentences=3):
 # Lemma and Tokens Function
 def text_analyzer(text):
     # create an nlp object
+    nlp = spacy.load('en_core_web_sm')
     doc = nlp(text)
     #extract tokens and lemmas
     allData = [('"Token":{},\n"Lemma":{}'.format(token.text, token.lemma_)) for token in doc]
