@@ -13,6 +13,13 @@ from deep_translator import GoogleTranslator
 from textblob import TextBlob
 import neattext as nt
 import spacy
+from spacy.cli import download
+
+try:
+    nlp = spacy.load("en_core_web_sm")
+except OSError:
+    download("en_core_web_sm")
+    nlp = spacy.load("en_core_web_sm")
 
 from collections import Counter
 import re
@@ -43,8 +50,6 @@ def summarize_text(text, num_sentences=3):
 #@st.cache_data
 # Lemma and Tokens Function
 def text_analyzer(text):
-    # import English library
-    nlp = spacy.load('en_core_web_sm')
     # create an nlp object
     doc = nlp(text)
     #extract tokens and lemmas
