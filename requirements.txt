@@ -2,7 +2,7 @@ deep_translator==1.11.4
 docx2txt==0.9
 matplotlib==3.10.3
 neattext==0.1.3
-numpy==2.2.5
+numpy
 pages==0.3
 pandas==2.2.3
 pdfplumber==0.11.6
