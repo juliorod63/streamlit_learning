@@ -9,7 +9,7 @@ pdfplumber==0.11.6
 Pillow==11.2.1
 seaborn==0.13.2
 spacy==3.6.0
-spacy-model-en_core_web_sm==2.2.0
+https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.2.0/en_core_web_sm-2.2.0.tar.gz
 streamlit==1.45.0
 tensorflow==2.19.0
 textblob==0.17.1
